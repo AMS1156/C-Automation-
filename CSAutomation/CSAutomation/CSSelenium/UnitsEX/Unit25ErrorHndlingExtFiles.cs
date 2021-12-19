@@ -42,10 +42,10 @@ namespace CSSelenium.UnitsEX
                 IList actualPrices = driver.FindElements(By.ClassName(".price.actual-price"));
 
                 string expected = GetData("PRICE");
-                foreach (IWebElement item in actualPrices)
+                foreach (IWebElement items in actualPrices)
                 {
 
-                    Assert.AreEqual(expected, item.Text);
+                    Assert.AreEqual(expected, items.Text);
                 }
             }
             catch (Exception e)
